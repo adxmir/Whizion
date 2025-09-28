@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/alidemir/Documents/PersonalProjects/Whizion/build",
+  "command": "/usr/bin/clang++  -I/Users/alidemir/Documents/PersonalProjects/Whizion -g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -Wall -Wextra -pedantic -o CMakeFiles/Whizion.dir/main.cpp.o -c /Users/alidemir/Documents/PersonalProjects/Whizion/main.cpp",
+  "file": "/Users/alidemir/Documents/PersonalProjects/Whizion/main.cpp",
+  "output": "CMakeFiles/Whizion.dir/main.cpp.o"
+}
+]
