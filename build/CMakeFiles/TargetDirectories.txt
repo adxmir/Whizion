@@ -1,3 +1,5 @@
 /Users/alidemir/Documents/PersonalProjects/Whizion/build/CMakeFiles/Whizion.dir
+/Users/alidemir/Documents/PersonalProjects/Whizion/build/CMakeFiles/package.dir
+/Users/alidemir/Documents/PersonalProjects/Whizion/build/CMakeFiles/package_source.dir
 /Users/alidemir/Documents/PersonalProjects/Whizion/build/CMakeFiles/edit_cache.dir
 /Users/alidemir/Documents/PersonalProjects/Whizion/build/CMakeFiles/rebuild_cache.dir
