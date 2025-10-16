@@ -6,6 +6,7 @@
 #include <SDL2/SDL_timer.h>
 #include <SDL2/SDL_ttf.h>
 #include <cerrno>
+#include <memory>
 
 
 class MainWindow{
@@ -18,6 +19,7 @@ private:
   SDL_Renderer* renderer;
 
   void closeWindow();
+  void makeText(const char* text, int size, int x, int y);
 };
 
 

@@ -24,26 +24,27 @@ MainWindow::MainWindow(unsigned int x, unsigned int y){
     }
     SDL_RenderClear(renderer);
 
-    TTF_Font* font = TTF_OpenFont("src/UI/fonts/tothepoint.ttf", 20);
-    if(!font){
-        std::cerr << "Failed to load font: " << TTF_GetError() << "\n";
-        closeWindow();
-    }
-    SDL_Color textColor = {255,255,255,255};
-    int width = 40;
-    int height = 20;
     const char* text = "Whizion";
-    TTF_SizeText(font, text, &width, &height);
+    makeText(text, 64, x/2, y/2-50);
 
-    SDL_Surface* surface = TTF_RenderText_Solid(font, text, textColor);
-    SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-    SDL_FreeSurface(surface);
+    const char* desc_text = "Be prepared to test your reaction time, problem solving skills and adaptability";
+    makeText(desc_text, 20, int(x/2), int(y/2) + 60);
 
-    SDL_Rect textRect = {100, 50 , width, height};
-    SDL_RenderCopy(renderer, texture, nullptr, &textRect);
     SDL_RenderPresent(renderer);
-    //SDL_DestroyTexture(texture);
+}
 
+void MainWindow::makeText(const char* text, int size , int x , int y){
+    SDL_Color textColor = {255,255,255,255};
+    std::shared_ptr<TTF_Font> font = std::shared_ptr<TTF_Font>(TTF_OpenFont("/Users/alidemir/Documents/PersonalProjects/Whizion/src/UI/fonts/RubikBubbles-Regular.ttf", size), TTF_CloseFont);
+    
+    
+    SDL_Surface* text_surface = TTF_RenderText_Blended_Wrapped(font.get(), text, textColor, 600);
+    SDL_Texture* text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
+    SDL_Rect textRect = {int(x - text_surface->w/2), int(y - text_surface->h/2), text_surface->w, text_surface->h};
+
+    SDL_FreeSurface(text_surface);
+    SDL_RenderCopy(renderer, text_texture, nullptr, &textRect);
+    SDL_DestroyTexture(text_texture);
 }
 
 
