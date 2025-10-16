@@ -1,2 +1,2 @@
 # Whizion
-In development : A game intended to test your reaction time and skills against a multitude of different games and problems
+In development : A game intended to test your reaction time and skills with the option to play solo or with friends. 
